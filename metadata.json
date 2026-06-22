@@ -1,0 +1,6 @@
+{
+  "name": "VORTEX Custom PC",
+  "description": "High-end Computer & Custom Rigs Store. Classic Nvidia-inspired premium cyber aesthetic, real-time RTX On/Off comparison, Interactive Smart Builder, Live WhatsApp/Marketing chat, and Instant PDF Invoice checkout.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

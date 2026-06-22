@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Space Grotesk', sans-serif;
+  
+  --color-nvidia-green: #00f2ff;
+  --color-cyber-glow: #00f2ff;
+  --color-cyber-teal: #00f2ff;
+  --color-neural-dark: #020202;
+  --color-neural-slate: #0d0d0d;
+
+  /* Redefine emerald to cyber-cyan #00f2ff to globally skin existing green highlights */
+  --color-emerald-50: #e5fdff;
+  --color-emerald-100: #b3faff;
+  --color-emerald-200: #80f6ff;
+  --color-emerald-300: #4df3ff;
+  --color-emerald-400: #1af0ff;
+  --color-emerald-500: #00f2ff;
+  --color-emerald-600: #00cbd6;
+  --color-emerald-700: #00a4ad;
+  --color-emerald-800: #007c85;
+  --color-emerald-900: #00555c;
+  --color-emerald-950: #002d31;
+
+  /* Deepen zinc variables for a solid Pitch Black canvas */
+  --color-zinc-50: #fbfbfb;
+  --color-zinc-100: #f0f0f0;
+  --color-zinc-200: #d9d9d9;
+  --color-zinc-300: #bbfbb;
+  --color-zinc-400: #888888;
+  --color-zinc-500: #666666;
+  --color-zinc-650: #444444;
+  --color-zinc-600: #3a3a3a;
+  --color-zinc-700: #202020;
+  --color-zinc-800: #141414;
+  --color-zinc-850: #0a0a0a;
+  --color-zinc-900: #060606;
+  --color-zinc-950: #020202;
+}
+
+@layer base {
+  body {
+    background-color: #020202;
+    color: #f4f4f5;
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+}
+
+/* Custom glowing effects and transitions */
+.glow-border {
+  position: relative;
+}
+.glow-border::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  background: linear-gradient(90deg, #00f2ff, #a855f7);
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.glow-border:hover::after {
+  opacity: 0.6;
+}
+
+.text-glow {
+  text-shadow: 0 0 15px rgba(0, 242, 255, 0.6);
+}
+
+.text-glow-teal {
+  text-shadow: 0 0 15px rgba(0, 242, 255, 0.6);
+}
+
+.text-glow-purple {
+  text-shadow: 0 0 15px rgba(168, 85, 247, 0.6);
+}
+
+/* Hide scrollbars but keep functionality */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Editorial & Cybercore styling utilities */
+.cyberpunk-title {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: -0.05em;
+}
+
+.cyber-nav-item {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  transition: all 0.2s ease;
+}
+
